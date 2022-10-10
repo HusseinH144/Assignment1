@@ -10,8 +10,6 @@ int hammingDistance(int n1, int n2)
  
     return setBits;
 }
- 
-// Driver code
 int main()
 {   printf("Enter 2 integers with a space in between");
     int x,y;
