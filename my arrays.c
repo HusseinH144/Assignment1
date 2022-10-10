@@ -19,6 +19,16 @@ int main(){
      printarray(array);
      printf("%d \n",median(array));
      printf("%d \n",mode(array));
+     swapIndex(array,2,5);
+     int isSorted(int array[SIZE]);
+     swapIndex(array,4,8);
+     int isSorted(int array[SIZE]);
+     swapIndex(array,3,2);
+     int isSorted(int array[SIZE]);
+     printf("%d \n",median(array));
+     printf("%d \n",mode(array));
+     int isSorted(int array[SIZE]);
+     void printarray(int x[SIZE]);
     return 0;
 }
 void printarray(int x[SIZE]){
