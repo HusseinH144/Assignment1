@@ -6,13 +6,16 @@ void printHistogram(int y[SIZE]);
 void bubbleSort(int array[SIZE]);
 int median(int array[SIZE]);
 int mode(int array[SIZE]);
+int isSorted(int array[SIZE]);
 int main(){
     int array[SIZE] = {1,1,1,1,1,2,2,2,3,3 }; 
      printarray(array);
      printHistogram(array);
      swapIndex(array,1,9);
+     printf(" is sorted %d \n",isSorted(array));
      printarray(array);
      bubbleSort(array);
+     printf("is sorted %d \n",isSorted(array));
      printarray(array);
      printf("%d \n",median(array));
      printf("%d \n",mode(array));
@@ -77,4 +80,12 @@ int mode(int array[SIZE]){
         max = i;}
         return max;
 }
-
+int isSorted(int array[SIZE]){
+    for(int i=0;i<SIZE;i++){
+        for(int j = i+1;j<SIZE;j++)
+            if(array[j]<array[i])
+                return 0;
+            
+                            }
+    return 1;
+}
