@@ -1,11 +1,17 @@
 #include <stdio.h>
 #define SIZE 10 
+void swapIndex(int array[SIZE],int a,int b);
 void printarray(int x[SIZE]);
 void printHistogram(int y[SIZE]);
+void bubbleSort(int array[SIZE]);
 int main(){
     int array[SIZE] = {1,1,1,1,1,2,2,2,3,3 }; 
      printarray(array);
      printHistogram(array);
+     swapIndex(array,1,9);
+     printarray(array);
+     bubbleSort(array);
+     printarray(array);
     return 0;
 }
 void printarray(int x[SIZE]){
@@ -32,4 +38,18 @@ void printHistogram(int array[SIZE]) {
       }
       printf("\n");}
    }
+    
+}
+   void swapIndex(int array[SIZE],int a,int b){
+       int x = array[a];
+       array[a]=array[b];
+       array[b]=x;
+    
+   }
+   void bubbleSort(int array[])
+{
+    for (int i = 0; i < SIZE; i++)
+        for (int j = 0; j < SIZE - i ; j++)
+            if (array[j] > array[j + 1])
+                swapIndex(array,j, j + 1);
 }
